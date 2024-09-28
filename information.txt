@@ -1,0 +1,62 @@
+=========================================================
+## This project is based on SBS Online youtube video
+https://www.youtube.com/watch?v=5gr_n262JJ0
+project created for nodejs practice code.
+
+=========================================================
+## Setting up the Node Project
+create one blank project folder
+npm init
+create server.js file
+npm install
+npm install express
+npm install nodemon
+
+=========================================================
+## Basic Server setup code
+server.js
+----------
+const http = require('http');
+const app = require('./app');
+const server = http.createServer(app);
+server.listen(3000 , console.log('Node Server Running at 3000'));
+
+app.js
+------
+const express = require('express');
+const app = express();
+app.use((req,res,next)=> {
+   res.status(200).json({
+    message:'Node SBS App is running after nodemon',
+    port:'3000',
+    developer:'Niraj'
+   }) 
+})
+
+module.exports = app
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
+
+
+=========================================================
